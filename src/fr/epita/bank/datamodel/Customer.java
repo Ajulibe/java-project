@@ -1,14 +1,18 @@
 package fr.epita.bank.datamodel;
 
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this is a class reprensenting the customer data
+ */
 public class Customer {
 
     private String address;
     private String name;
 
-    private List<InvestmentAccount> investmentAccounts;
-    private List<SavingsAccount> savingsAccounts;
+    private List<InvestmentAccount> investmentAccounts = new ArrayList<>();
+    private List<SavingsAccount> savingsAccounts = new ArrayList<>();
 
     public Customer(String address, String name) {
         this.address = address;
@@ -53,6 +57,8 @@ public class Customer {
         return "Customer{" +
                 "address='" + address + '\'' +
                 ", name='" + name + '\'' +
+                ", investmentAccounts=" + investmentAccounts +
+                ", savingsAccounts=" + savingsAccounts +
                 '}';
     }
 }
